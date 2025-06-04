@@ -1,0 +1,17 @@
+execute if score @s chargeDisplay matches 100 run return run title @s title {"shadow_color":16777215,"text":"zpp\uE216",font:"ui"}
+execute if score @s chargeDisplay matches 95.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE215",font:"ui"}
+execute if score @s chargeDisplay matches 89.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE214",font:"ui"}
+execute if score @s chargeDisplay matches 82.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE213",font:"ui"}
+execute if score @s chargeDisplay matches 74.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE212",font:"ui"}
+execute if score @s chargeDisplay matches 70.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE211",font:"ui"}
+execute if score @s chargeDisplay matches 65.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE210",font:"ui"}
+execute if score @s chargeDisplay matches 60.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE209",font:"ui"}
+execute if score @s chargeDisplay matches 52.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE208",font:"ui"}
+execute if score @s chargeDisplay matches 49.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE207",font:"ui"}
+execute if score @s chargeDisplay matches 42.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE206",font:"ui"}
+execute if score @s chargeDisplay matches 35.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE205",font:"ui"}
+execute if score @s chargeDisplay matches 28.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE204",font:"ui"}
+execute if score @s chargeDisplay matches 21.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE203",font:"ui"}
+execute if score @s chargeDisplay matches 14.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE202",font:"ui"}
+execute if score @s chargeDisplay matches 7.. run return run title @s title {"shadow_color":16777215,"text":"zpp\uE201",font:"ui"}
+execute if score @s chargeDisplay matches 0 run return run title @s title {"shadow_color":16777215,"text":"zpp\uE200",font:"ui"}

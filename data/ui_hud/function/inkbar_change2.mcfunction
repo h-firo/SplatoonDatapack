@@ -1,0 +1,1 @@
+$title @s actionbar {"shadow_color":16777215,"text":"wee\uE10$(ink)",font:"ui"}

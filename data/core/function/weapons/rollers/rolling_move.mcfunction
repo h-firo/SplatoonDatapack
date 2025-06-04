@@ -1,0 +1,2 @@
+$execute if score @s rightHold matches 10.. run attribute @s movement_speed modifier add shot_move $(RollingSpeed) add_value
+execute if score @s isSprint matches 1 run attribute @s movement_speed modifier remove shot_move

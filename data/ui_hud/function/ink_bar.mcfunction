@@ -1,0 +1,2 @@
+$execute if score @s ink matches 100.. run function ui_hud:inkbar_change with storage player: $(XpLevel)
+$execute if score @s ink matches ..99 run function ui_hud:inkbar_change2 with storage player: $(XpLevel)

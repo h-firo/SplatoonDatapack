@@ -1,0 +1,1 @@
+$execute if data storage player: {$(XpLevel):{category:charger}} if score @s rightHold matches 1.. run function ui_hud:charger_chage

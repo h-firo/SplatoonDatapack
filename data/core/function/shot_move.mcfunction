@@ -1,0 +1,2 @@
+$execute unless data storage player: {$(num):{category:roller}} if score @s rightHold matches 1.. run attribute @s movement_speed modifier add shot_move $(HSpeed) add_value
+$execute if data storage player: {$(num):{category:roller}} run function core:weapons/rollers/rolling_move with storage shot_temp: $(num)

@@ -1,0 +1,1 @@
+$execute if score @s ink matches 100.. run title @s actionbar {"shadow_color":16777215,"text":"wee\uE1$(ink)",font:"ui"}

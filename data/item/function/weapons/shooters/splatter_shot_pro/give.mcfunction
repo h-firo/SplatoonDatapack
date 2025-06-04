@@ -1,0 +1,2 @@
+give @s emerald[consumable={consume_seconds:100,animation:"bow",sound:"block.metal.break",has_consume_particles:false},custom_data={item:"weapon"},\
+                item_model="splatter_shot_pro",item_name={translate:item.weapon.splattershot_pro}] 1
