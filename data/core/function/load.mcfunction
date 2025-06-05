@@ -25,6 +25,7 @@ scoreboard objectives add health dummy
 scoreboard objectives add accuracy dummy
 scoreboard objectives add damage dummy
 scoreboard objectives add speed dummy
+scoreboard objectives add removeInk dummy
 scoreboard objectives add charge dummy
 scoreboard objectives add chargeCarry dummy
 scoreboard objectives add maxChageValue dummy
@@ -85,6 +86,7 @@ carbonroller:{FireRate:100,Damage:107,Ink:39,Blur:1,AirBlur:3,Speed:0.001,Gravit
 dynamoroller:{FireRate:40,Damage:180,Ink:180,Blur:1,AirBlur:3,Speed:0.001,Gravity:0.1,SSpeed:2,HSpeed:1,DamageAT:7,PreGap:19,MinRange:-1,MaxRange:1,RollingSpeed:0.4,RollingDamage:125,FireRate2:42,VSpeed:0.002},\
 wideroller:{FireRate:130,Damage:70,Ink:90,Blur:1,AirBlur:3,Speed:0.001,Gravity:0.08,SSpeed:2,HSpeed:1,DamageAT:3,PreGap:2,MinRange:-2,MaxRange:2,RollingSpeed:0.7,RollingDamage:70,FireRate2:150,VSpeed:0.002}},\
 charger:{\
-eliter4k:{FireRate:4,Damage:180,Ink:250,Blur:0,AirBlur:1,Speed:0.008,Gravity:0,SSpeed:2,HSpeed:0.1,DamageAT:0,PreGap:2,ChargeTime:30,CKTime:25,CKRate:8,DeltaRange:1}}}
+eliter4k:{FireRate:40,Damage:180,Ink:250,Blur:0,AirBlur:1,Speed:0.008,Gravity:0,SSpeed:2,HSpeed:0.1,DamageAT:0,PreGap:2,ChargeTime:30,CKTime:25,CKRate:8,DeltaRange:1},\
+splatcharger:{FireRate:40,Damage:160,Ink:180,Blur:0,AirBlur:1,Speed:0.006,Gravity:0,SSpeed:2,HSpeed:0.2,DamageAT:0,PreGap:2,ChargeTime:20,CKTime:25,CKRate:8,DeltaRange:1}}}
 
 tellraw @a[tag=operator] {"text":"リロードしました"}

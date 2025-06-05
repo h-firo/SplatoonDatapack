@@ -5,7 +5,7 @@ execute store result score @s shotZ run data get entity @s Pos[2] 1000
 
 #アマスタをsummon
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute as @n[type=armor_stand,tag=owner$(num)] run data modify entity @s data.color set from storage team_color: colors.$(team)
 $execute as @n[type=armor_stand,tag=owner$(num)] at @s run function core:weapons/shooters/shot_as with storage shot_temp: $(num)
 playsound block.stone.place master @a ~ ~ ~ 0.8 1.5

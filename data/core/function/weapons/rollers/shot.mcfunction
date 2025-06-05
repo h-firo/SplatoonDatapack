@@ -5,15 +5,15 @@ execute store result score @s shotZ run data get entity @s Pos[2] 1000
 
 #アマスタをsummon
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^ ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^-0.4 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^-0.4 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^0.4 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^0.4 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^-0.2 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^-0.2 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^0.2 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
+summon armor_stand ^0.2 ^ ^1.0 {Tags:["shot$(team)","ink","owner$(num)","general"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),damage:$(Damage),shotNum:$(shotNum),damageAT:$(DamageAT)},attributes:[{id:"minecraft:gravity",base:$(Gravity)}]}
 $execute as @e[type=armor_stand,tag=owner$(num)] run data modify entity @s data.color set from storage team_color: colors.$(team)
 $execute as @e[type=armor_stand,tag=owner$(num)] at @s run function core:weapons/rollers/shot_as with storage shot_temp: $(num)
 
