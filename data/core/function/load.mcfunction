@@ -12,6 +12,7 @@ scoreboard objectives add playerCount dummy
 #IIN
 scoreboard objectives add pNum dummy
 scoreboard objectives add shotNum dummy
+scoreboard objectives add bombNum dummy
 
 #Player
 scoreboard objectives add team dummy
@@ -30,6 +31,9 @@ scoreboard objectives add charge dummy
 scoreboard objectives add chargeCarry dummy
 scoreboard objectives add maxChageValue dummy
 scoreboard objectives add chargeDisplay dummy
+
+#subweapon
+scoreboard objectives add explosionTimer dummy
 
 #Delay
 scoreboard objectives add delay dummy
@@ -70,7 +74,7 @@ scoreboard players set @a ink 999
 tag @a remove pNumAlreadySet
 
 #ストレージ
-data merge storage team_color: {colors:{0:"blue",1:"yellow",2:"orange",3:"pink",4:"lime"}}
+data merge storage team_color: {0:"blue",1:"yellow",2:"orange",3:"pink",4:"lime"}
 #[連射レート(フレーム/3×10),ダメージ,インク消費量(割合×10),拡散,ジャンプ中拡散,射程(着弾速度),射程(落下速度,デフォ0.08),イカ速,ヒト速,威力減衰,前隙\
 (ローラー:塗り進み最小,塗り進み最大,塗り進み速度,塗り進みダメージ,縦振りレート,縦振り速度),\
 (チャージャー:チャージ時間,チャージキープ時間,チャージキープレート,射程増加割合,空中チャージ減衰,最大チャージレート,最大ダメージ),\
