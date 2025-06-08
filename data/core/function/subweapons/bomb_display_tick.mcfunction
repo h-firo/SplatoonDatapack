@@ -1,0 +1,2 @@
+execute if data entity @s {data:{type:"splatbomb"}} run function core:subweapons/splashbomb/splatbomb_display_tick with entity @s data
+execute if data entity @s {data:{type:"suctionbomb"}} run function core:subweapons/suctionbomb/suctionbomb_display_tick with entity @s data

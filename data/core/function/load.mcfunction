@@ -34,6 +34,7 @@ scoreboard objectives add chargeDisplay dummy
 
 #subweapon
 scoreboard objectives add explosionTimer dummy
+scoreboard objectives add isSticking dummy
 
 #Delay
 scoreboard objectives add delay dummy

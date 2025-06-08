@@ -1,2 +1,2 @@
 give @s emerald[consumable={consume_seconds:100,animation:"bow",sound:"block.metal.break",has_consume_particles:false},custom_data={item:"weapon"},\
-                item_model="52gal",item_name={translate:item.weapon.52Gal}] 1
+                item_model="52gal",item_name={translate:item.weapon.52Gal},custom_model_data={strings:["0"]}] 1

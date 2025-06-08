@@ -10,6 +10,10 @@ execute if score @s shotDelay matches 1.. run scoreboard players set @s isSprint
 #イカ移動演出
 $execute if score @s isSprint matches 1 if predicate core:is_moving run particle block{block_state:{Name:"$(color)_concrete"}} ~ ~ ~ 0 0 0 0 5
 
+#武器透明化
+execute if score @s isSprint matches 1 run item modify entity @s weapon.mainhand {function:"set_custom_model_data",strings:{values:["1"],mode:"replace_all"}}
+execute if score @s isSprint matches 0 run item modify entity @s weapon.mainhand {function:"set_custom_model_data",strings:{values:["0"],mode:"replace_all"}}
+
 #インク回復
 execute if score @s isSprint matches 1 run scoreboard players add @s ink 10
 execute if score @s ink matches 999.. run scoreboard players set @s ink 999

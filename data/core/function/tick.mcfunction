@@ -8,7 +8,8 @@ scoreboard players set count playerCount 0
 execute as @a run scoreboard players add count playerCount 1
 
 #ディスプレイ系統
-execute as @e[type=item_display,tag=bombDisplay] run function core:subweapons/splashbomb/bomb_display_tick with entity @s data
+execute as @e[type=item_display,tag=bombDisplay] run function core:subweapons/bomb_display_tick
+execute as @e[type=armor_stand,tag=bomb] at @s run function core:subweapons/armorstand_tick
 
 #UIとHUD
 function ui_hud:tick
