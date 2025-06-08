@@ -70,6 +70,7 @@ title @a times 0 8 0
 #初期化
 scoreboard players set num pNum 0
 scoreboard players set num shotNum 0
+scoreboard players set num bombNum 0
 scoreboard players set @a ink 999
 tag @a remove pNumAlreadySet
 

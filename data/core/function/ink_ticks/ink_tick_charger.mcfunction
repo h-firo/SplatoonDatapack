@@ -7,6 +7,6 @@ $particle block{block_state:"minecraft:$(color)_concrete"} ~ ~ ~ 0.1 0.1 0.1 0 1
 $execute if data entity @s {OnGround:true} run fill ~-1 ~-1 ~-1 ~1 ~2 ~1 $(color)_concrete replace #core:can_inking
 
 #攻撃
-function core:ink_damage with entity @s data
+function core:ink_damages/ink_damage_charger with entity @s data
 
 execute if data entity @s {OnGround:true} run kill @s
