@@ -1,0 +1,10 @@
+{
+    "replace": true,
+    "values": [
+        "blue_concrete",
+        "yellow_concrete",
+        "pink_concrete",
+        "lime_concrete",
+        "orange_concrete"
+    ]
+}

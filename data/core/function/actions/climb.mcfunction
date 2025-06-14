@@ -1,4 +1,5 @@
 #壁があるとき、浮遊効果を与える
+scoreboard players set @s isSprint 1
 effect give @s levitation 100 5 true
 summon area_effect_cloud ~ ~ ~ \
 {Particle:{type:"block",block_state:{Name:blue_concrete}},Radius:0.8f,Duration:10,Age:3,ReapplicationDelay:10,WaitTime:0,potion_contents:{potion:"minecraft:water",\

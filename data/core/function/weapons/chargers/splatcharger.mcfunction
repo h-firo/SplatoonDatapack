@@ -13,15 +13,15 @@ execute store result score @s shotZ run data get entity @s Pos[2] 1000
 
 #アマスタsummon(チャージ割合によってsummonするアマスタの数が変化)
 $execute if score @s chargeDisplay matches 100.. positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0019},attributes:[{id:"minecraft:gravity",base:0.2}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0019},attributes:[{id:"minecraft:gravity",base:0.2},{id:"minecraft:scale",base:0.1}]}
 $execute if score @s chargeDisplay matches 60.. positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0017},attributes:[{id:"minecraft:gravity",base:0.2}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0017},attributes:[{id:"minecraft:gravity",base:0.2},{id:"minecraft:scale",base:0.1}]}
 $execute if score @s chargeDisplay matches 30.. positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0015},attributes:[{id:"minecraft:gravity",base:0.2}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0015},attributes:[{id:"minecraft:gravity",base:0.2},{id:"minecraft:scale",base:0.1}]}
 $execute if score @s chargeDisplay matches 20.. positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.001},attributes:[{id:"minecraft:gravity",base:0.2}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.001},attributes:[{id:"minecraft:gravity",base:0.2},{id:"minecraft:scale",base:0.1}]}
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0005},attributes:[{id:"minecraft:gravity",base:0.2}]}
+summon armor_stand ^ ^ ^2.0 {Tags:["shot$(team)","ink","owner$(num)","charger"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum),damageAT:$(DamageAT),speed:0.0005},attributes:[{id:"minecraft:gravity",base:0.2},{id:"minecraft:scale",base:0.1}]}
 
 $execute as @e[type=armor_stand,tag=owner$(num)] run data modify entity @s data.color set from storage team_color: colors.$(team)
 $execute as @e[type=armor_stand,tag=owner$(num)] run scoreboard players operation @s damage = @p[level=$(num)] damage
@@ -38,3 +38,6 @@ tag @e[type=armor_stand,tag=shot1] remove shot1
 
 playsound entity.player.attack.weak master @a ~ ~ ~ 1 0.5
 execute if score @s chargeDisplay matches ..99 run return fail
+playsound block.fence_gate.close master @a ~ ~ ~ 1 0.7
+playsound block.fence_gate.close master @a ~ ~ ~ 0.8 0.6
+playsound block.fence_gate.close master @a ~ ~ ~ 0.6 0.5
