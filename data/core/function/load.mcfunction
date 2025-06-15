@@ -18,10 +18,11 @@ scoreboard objectives add bombNum dummy
 scoreboard objectives add team dummy
 scoreboard objectives add ink dummy
 scoreboard objectives add inkTo100 dummy
+scoreboard objectives add markingTimer dummy
 
 #Health
 scoreboard objectives add health dummy
-
+scoreboard players set @a health 100
 #weapon
 scoreboard objectives add accuracy dummy
 scoreboard objectives add damage dummy

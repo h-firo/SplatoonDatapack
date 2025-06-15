@@ -11,8 +11,12 @@ execute as @a run scoreboard players add count playerCount 1
 execute as @e[type=item_display,tag=bombDisplay] run function core:subweapons/bomb_display_tick
 execute as @e[type=armor_stand,tag=bomb] at @s run function core:subweapons/armorstand_tick
 
+execute as @e[tag=player] at @s if entity @s[tag=Marking] run function core:marker/marking with entity @s
+
 #UIとHUD
 function ui_hud:tick
 
+#タグ・スコアリセット
 tag @a remove Click
+tag @e[tag=player,tag=alreadySearch] remove alreadySearch
 scoreboard players set @a rightClick 0

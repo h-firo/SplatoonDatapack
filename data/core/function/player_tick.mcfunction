@@ -23,6 +23,12 @@ $function core:actions/wall_climb with storage player: $(XpLevel)
 #ジャンプブレ
 $function core:air_blur with storage shot_temp: $(XpLevel)
 
+#マーキング
+execute if entity @s[tag=Marking] run function core:marker/marking with entity @s
+
+#マーキング矢印
+$function core:marker/search with storage player: $(XpLevel)
+
 #インク量
 execute if score @s ink matches ..0 run scoreboard players set @s ink 0
 scoreboard players operation @s inkTo100 = @s ink
