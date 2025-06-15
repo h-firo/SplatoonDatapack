@@ -1,0 +1,4 @@
+$execute if block ~ ~ ~0.1 #core:can_sticking if entity @a[level=$(num),distance=..25] run return fail
+$summon armor_stand ~ ~ ~ {Tags:["marker$(bombNum)","bomb","owner$(num)"],Invisible:true,Silent:true,data:{team:$(team),owner:$(num),bombNum:$(bombNum),type:"angleshooter_marker",color:$(color)},NoGravity:true}
+$execute if block ~ ~-0.1 ~ #core:can_sticking if entity @a[level=$(num),distance=..25] positioned ^ ^0.5 ^1 run function core:subweapons/angleshooter/armorstand_throw with storage subw: $(num)
+$execute unless block ~ ~-0.1 ~ #core:can_sticking if entity @a[level=$(num),distance=..25] positioned ^ ^ ^1 run function core:subweapons/angleshooter/armorstand_throw with storage subw: $(num)
