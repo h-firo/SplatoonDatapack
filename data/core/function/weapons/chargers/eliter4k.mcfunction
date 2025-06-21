@@ -1,3 +1,4 @@
+#TODO 弾の大きさ変更
 #ダメージ計算(通常はチャージ割合に応じて変化、フルチャージ時以外は100ダメージ以上が出ないように調整、40以下のダメージが出ないように調整)
 $scoreboard players set @s damage $(Damage)
 scoreboard players operation @s damage *= @s chargeDisplay
