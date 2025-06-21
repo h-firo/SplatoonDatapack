@@ -21,7 +21,8 @@ scoreboard objectives add specialPoint dummy
 scoreboard objectives add MaxSpecialPoint dummy
 scoreboard objectives add inkTo100 dummy
 scoreboard objectives add markingTimer dummy
-scoreboard objectives add paintPoint dummy
+scoreboard objectives add nowPaintAreaBlocks dummy
+scoreboard objectives add nowPaitnAreaMyTeamBlocks dummy
 
 #Health
 scoreboard objectives add health dummy
@@ -78,6 +79,7 @@ scoreboard players set num pNum 0
 scoreboard players set num shotNum 0
 scoreboard players set num bombNum 0
 scoreboard players set @a ink 999
+scoreboard players set @a specialPoint 0
 tag @a remove pNumAlreadySet
 
 #ストレージ
