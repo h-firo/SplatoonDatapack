@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "hold": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": {
+          "slots": {
+            "weapon.mainhand": {
+              "components": {
+                "minecraft:custom_data": {
+                  "item": "specialweapon"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "core:specialweapons/shot"
+  }
+}

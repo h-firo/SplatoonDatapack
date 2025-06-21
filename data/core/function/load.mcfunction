@@ -20,6 +20,9 @@ scoreboard objectives add ink dummy
 scoreboard objectives add specialPoint dummy
 scoreboard objectives add MaxSpecialPoint dummy
 scoreboard objectives add inkTo100 dummy
+scoreboard objectives add useSpecialWeapon dummy
+scoreboard objectives add specialUseCount dummy
+scoreboard objectives add maxSpecialUseCount dummy
 scoreboard objectives add markingTimer dummy
 scoreboard objectives add nowPaintAreaBlocks dummy
 scoreboard objectives add nowPaitnAreaMyTeamBlocks dummy

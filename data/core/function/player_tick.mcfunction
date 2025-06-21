@@ -1,5 +1,7 @@
 #delay処理
 execute unless score @s delay matches 0 run scoreboard players remove @s delay 1
+execute unless score @s useSpecialWeapon matches 0 run scoreboard players remove @s useSpecialWeapon 1
+execute if score @s useSpecialWeapon matches 1.. if score @s specialUseCount >= @s maxSpecialUseCount run scoreboard players set @s useSpecialWeapon 0
 execute if score @s shotDelay matches 1.. run scoreboard players remove @s shotDelay 10
 execute unless score @s sprintDelay matches 0 run scoreboard players remove @s sprintDelay 1
 execute if score @s delay matches 0 run scoreboard players set @s accuracy 0
@@ -9,9 +11,12 @@ execute unless entity @s[tag=Click] run scoreboard players set @s rightHold 0
 execute unless entity @s[tag=Click] run scoreboard players set @s charge 0
 execute unless entity @s[tag=Click] run scoreboard players set @s chargeDisplay 0
 
+#スペシャル発動
+execute if score @s rightClick matches 1 if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={item:"specialUse"}] run function core:specialweapons/use with entity @s
+
 #射撃中に移動速度が遅くなることの抑制
 attribute @s movement_speed modifier remove shot_move
-$function core:shot_move with storage shot_temp: $(XpLevel)
+$execute if items entity @s weapon.mainhand emerald[custom_data={item:"weapon"}] run function core:shot_move with storage shot_temp: $(XpLevel)
 execute if score @s ink matches ..0 run attribute @s movement_speed modifier remove shot_move
 
 #ローラーの塗り
