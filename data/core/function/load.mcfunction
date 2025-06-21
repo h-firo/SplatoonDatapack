@@ -121,4 +121,4 @@ charger:{\
 eliter4k:{subWeapon:"inkmine",specialWeapon:"wavebreaker",specialPoint:210},\
 splatcharger:{subWeapon:"splatbomb",specialWeapon:"inkvac",specialPoint:200}}}
 
-tellraw @a[tag=operator] {"text":"リロードしました"}
+tellraw @a[tag=operator] {"text":"リロードしました[1.21.6]"}
