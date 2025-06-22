@@ -1,5 +1,4 @@
 #スペシャルポイント増加処理
-
 #塗り可能範囲内の全てのブロック数を取得
 $execute store result score @s nowPaintAreaBlocks run clone ~$(fx) ~$(fy) ~$(fz) ~$(tx) ~$(ty) ~$(tz) ~$(fx) ~$(fy) ~$(fz) filtered #core:can_inking force
 #塗り可能範囲内の既存の自チームブロック数を取得

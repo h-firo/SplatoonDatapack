@@ -7,6 +7,7 @@ $data modify storage shot_temp: $(XpLevel) set from storage player: $(XpLevel).w
 $data modify storage shot_temp: $(XpLevel).team set from storage player: $(XpLevel).team
 $data modify storage shot_temp: $(XpLevel).color set from storage player: $(XpLevel).color
 $data modify storage shot_temp: $(XpLevel).num set from storage player: $(XpLevel).num
+$data modify storage shot_temp: $(XpLevel).category set from storage player: $(XpLevel).category
 
 #shotNumの増加
 scoreboard players add num shotNum 1

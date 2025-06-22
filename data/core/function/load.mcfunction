@@ -45,6 +45,9 @@ scoreboard objectives add chargeDisplay dummy
 scoreboard objectives add explosionTimer dummy
 scoreboard objectives add isSticking dummy
 
+#SpecialWeapon
+scoreboard objectives add shotFireRate dummy
+
 #Delay
 scoreboard objectives add delay dummy
 scoreboard objectives add shotDelay dummy
@@ -111,7 +114,7 @@ data merge storage subspecials: {\
 shooter:{\
 splattershot:{subWeapon:"suctionbomb",specialWeapon:"trizooka",specialPoint:210},\
 splattershot_pro:{subWeapon:"angleshooter",specialWeapon:"crabtank",specialPoint:180},\
-FTgal:{subWeapon:"splashwall",specialWeapon:"killerwail51",specialPoint:200}},\
+ftgal:{subWeapon:"splashwall",specialWeapon:"killerwail51",specialPoint:200}},\
 roller:{\
 splatroller:{subWeapon:"curingbomb",specialWeapon:"bigbubbler",specialPoint:180},\
 carbonroller:{subWeapon:"autobomb",specialWeapon:"trizooka",specialPoint:190},\

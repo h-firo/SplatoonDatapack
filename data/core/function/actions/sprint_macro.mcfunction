@@ -1,3 +1,4 @@
+#TODO 体力回復
 #イカ移動フラグ
 $execute if predicate core:is_sprint if block ~ ~-1 ~ $(color)_concrete run scoreboard players set @s isSprint 1
 $execute if predicate core:is_sneaking if block ~ ~-1 ~ $(color)_concrete run scoreboard players set @s isSprint 1

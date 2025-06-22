@@ -1,7 +1,6 @@
 #delay処理
 execute unless score @s delay matches 0 run scoreboard players remove @s delay 1
-execute unless score @s useSpecialWeapon matches 0 run scoreboard players remove @s useSpecialWeapon 1
-execute if score @s useSpecialWeapon matches 1.. if score @s specialUseCount >= @s maxSpecialUseCount run scoreboard players set @s useSpecialWeapon 0
+$execute if score @s useSpecialWeapon matches 0.. run function core:specialweapons/use_tick with storage player: $(XpLevel)
 execute if score @s shotDelay matches 1.. run scoreboard players remove @s shotDelay 10
 execute unless score @s sprintDelay matches 0 run scoreboard players remove @s sprintDelay 1
 execute if score @s delay matches 0 run scoreboard players set @s accuracy 0

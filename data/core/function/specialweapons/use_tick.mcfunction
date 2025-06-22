@@ -1,0 +1,3 @@
+scoreboard players remove @s useSpecialWeapon 1
+execute if score @s useSpecialWeapon matches 1.. if score @s specialUseCount >= @s maxSpecialUseCount run scoreboard players set @s useSpecialWeapon 0
+$execute if score @s useSpecialWeapon matches 0 run item replace entity @s hotbar.1 with carrot_on_a_stick[item_model=specialweapon,custom_model_data={strings:["$(specialWeapon)"]},custom_data={item:"specialUse"},item_name={translate:item.specialweapon}]

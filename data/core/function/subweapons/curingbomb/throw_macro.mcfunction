@@ -13,4 +13,4 @@ $summon item_display ~ ~ ~ {Tags:["bombDisplay"],data:{bNum:$(bombNum),team:$(te
                             transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.4f,0f],scale:[1f,1f,1f]},\
                             item:{id:"minecraft:feather",count:1,components:{"minecraft:custom_model_data":{strings:["$(color)"]}}}}
 
-scoreboard players remove @s ink 700
+scoreboard players remove @s ink 650

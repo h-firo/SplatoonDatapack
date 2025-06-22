@@ -15,6 +15,9 @@ execute as @e[type=armor_stand,tag=bomb] at @s run function core:subweapons/armo
 
 execute as @e[tag=player] at @s if entity @s[tag=Marking] run function core:marker/marking with entity @s
 
+#サブウェポン
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{item:"weapon"}}}}] at @s run function core:subweapons/tick with entity @s
+
 #UIとHUD
 function ui_hud:tick
 
