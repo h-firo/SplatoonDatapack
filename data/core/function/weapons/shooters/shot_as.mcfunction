@@ -27,5 +27,5 @@ $execute if score @s tX < @s tZ if score @s shotBlur matches 1 run scoreboard pl
 
 #Motionの値に計算結果を代入
 $execute store result entity @s Motion[0] double $(Speed) run scoreboard players get @s shotX
-execute store result entity @s Motion[1] double 0.0002 run scoreboard players get @s shotY
+execute store result entity @s Motion[1] double 0.001 run scoreboard players get @s shotY
 $execute store result entity @s Motion[2] double $(Speed) run scoreboard players get @s shotZ

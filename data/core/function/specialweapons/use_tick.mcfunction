@@ -1,3 +1,8 @@
+#カニタンク
+$function core:specialweapons/crabtank/tick with storage player: $(num)
+
+#共通
 scoreboard players remove @s useSpecialWeapon 1
 execute if score @s useSpecialWeapon matches 1.. if score @s specialUseCount >= @s maxSpecialUseCount run scoreboard players set @s useSpecialWeapon 0
-$execute if score @s useSpecialWeapon matches 0 run item replace entity @s hotbar.1 with carrot_on_a_stick[item_model=specialweapon,custom_model_data={strings:["$(specialWeapon)"]},custom_data={item:"specialUse"},item_name={translate:item.specialweapon}]
+execute if score @s useSpecialWeapon matches ..0 run playsound block.respawn_anchor.deplete master @a ~ ~ ~ 1 1.5
+$execute if score @s useSpecialWeapon matches ..0 run item replace entity @s hotbar.1 with carrot_on_a_stick[custom_model_data={strings:["$(specialWeapon)"]},custom_data={item:"specialUse"},item_name={translate:item.specialweapon}]

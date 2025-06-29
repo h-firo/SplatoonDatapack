@@ -1,6 +1,4 @@
-execute if score @s preDelay matches 1.. run scoreboard players set @s rightHold 0
-execute if score @s preDelay matches 1.. run scoreboard players remove @s preDelay 1
-execute if score @s preDelay matches 1.. run return fail
+execute if score @s useSpecialWeapon matches ..0 run return fail
 
 #プレイヤーが所属しているteamと、プレイヤーが使うスペシャルを、shot関数にマクロとして渡す
 $data modify storage special_temp: $(XpLevel) set from storage player: $(XpLevel).weapon
@@ -15,8 +13,9 @@ $execute if data storage player: {$(XpLevel):{specialWeapon:crabtank}} store res
 scoreboard players add num shotNum 1
 $execute store result storage special_temp: $(XpLevel).shotNum int 1 run scoreboard players get num shotNum
 
-$execute if data storage player: {$(XpLevel):{specialWeapon:trizooka}} if score @s shotDelay matches ..0 run \
-function core:specialweapons/trizooka/shot with storage special_temp: $(XpLevel)
+execute if score @s shotDelay matches 1.. run return run \
+item replace entity @s hotbar.1 with emerald[consumable={consume_seconds:100,animation:"none",sound:"entity.tropical_fish.ambient",has_consume_particles:false},\
+                                            custom_data={item:"specialweapon"},item_model="specialweapon",item_name={translate:item.specialweapon.crabtank},custom_model_data={strings:["crabtank"]}] 1
 
 $execute if data storage player: {$(XpLevel):{specialWeapon:crabtank}} if score @s shotDelay matches ..0 run \
-function core:specialweapons/crabtank/shot with storage special_temp: $(XpLevel)
+function core:specialweapons/crabtank/explosion_shot with storage special_temp: $(XpLevel)

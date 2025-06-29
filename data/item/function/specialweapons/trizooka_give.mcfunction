@@ -1,1 +1,1 @@
-item replace entity @s hotbar.1 with carrot_on_a_stick[custom_model_data={strings:["trizooka"]},custom_data={item:"specialUse"}]
+item replace entity @s hotbar.1 with carrot_on_a_stick[custom_model_data={strings:["trizooka"]},custom_data={item:"specialUse"},item_name={translate:item.specialweapon}]

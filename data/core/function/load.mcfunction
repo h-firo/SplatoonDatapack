@@ -26,6 +26,7 @@ scoreboard objectives add maxSpecialUseCount dummy
 scoreboard objectives add markingTimer dummy
 scoreboard objectives add nowPaintAreaBlocks dummy
 scoreboard objectives add nowPaitnAreaMyTeamBlocks dummy
+scoreboard objectives add weaponCount dummy
 
 #Health
 scoreboard objectives add health dummy
@@ -47,6 +48,8 @@ scoreboard objectives add isSticking dummy
 
 #SpecialWeapon
 scoreboard objectives add shotFireRate dummy
+scoreboard objectives add damage dummy
+scoreboard objectives add isCube dummy
 
 #Delay
 scoreboard objectives add delay dummy

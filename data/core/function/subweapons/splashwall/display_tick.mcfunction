@@ -1,0 +1,1 @@
+$execute at @n[type=armor_stand,tag=bomb$(bNum)] run tp @s ~ ~ ~ ~ 0

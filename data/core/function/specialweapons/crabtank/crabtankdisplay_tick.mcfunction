@@ -1,0 +1,1 @@
+$execute at @p[level=$(owner)] rotated as @p[level=$(owner)] run tp @s ~ ~ ~ ~ 0
