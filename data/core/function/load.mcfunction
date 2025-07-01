@@ -48,6 +48,9 @@ scoreboard objectives add isSticking dummy
 
 #SpecialWeapon
 scoreboard objectives add shotFireRate dummy
+scoreboard objectives add killerwailDamageDelay dummy
+scoreboard objectives add killerwailTargetDelay dummy
+scoreboard objectives add isKillerWail dummy
 scoreboard objectives add damage dummy
 scoreboard objectives add isCube dummy
 
@@ -90,6 +93,7 @@ scoreboard players set num bombNum 0
 scoreboard players set @a ink 999
 scoreboard players set @a specialPoint 0
 tag @a remove pNumAlreadySet
+tag @a[tag=!player] add player
 
 #ストレージ
 data merge storage team_color: {0:"blue",1:"yellow",2:"orange",3:"pink",4:"lime"}
@@ -128,3 +132,4 @@ eliter4k:{subWeapon:"inkmine",specialWeapon:"wavebreaker",specialPoint:210},\
 splatcharger:{subWeapon:"splatbomb",specialWeapon:"inkvac",specialPoint:200}}}
 
 tellraw @a[tag=operator] {"text":"リロードしました[1.21.6]"}
+tellraw @a[tag=operator] {"text":"ゲームを開始する際は、pNumを付与してください"}

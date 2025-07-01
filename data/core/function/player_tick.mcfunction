@@ -44,3 +44,5 @@ $execute store result storage player: $(XpLevel).ink int 1 run scoreboard player
 
 #イカ移動の処理
 $function core:actions/sprint with storage player: $(XpLevel)
+
+$tag @e[tag=player] remove killerwail$(XpLevel)

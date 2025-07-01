@@ -16,6 +16,7 @@ execute as @e[type=item_display,tag=bombDisplay] run function core:subweapons/bo
 execute as @e[type=item_display,tag=trizookaDisplay] run function core:specialweapons/trizooka/bullet_display_tick
 execute as @e[type=item_display,tag=explshotDisplay] run function core:specialweapons/crabtank/explshot_display_tick with entity @s data
 execute as @e[type=item_display,tag=crabtankDisplay] run function core:specialweapons/crabtank/crabtankdisplay_tick with entity @s data
+execute as @e[type=item_display,tag=kd] at @s run function core:specialweapons/killerwail51/display_tick with entity @s data
 execute as @e[type=armor_stand,tag=bomb] at @s run function core:subweapons/armorstand_tick
 
 execute as @e[tag=player] at @s if entity @s[tag=Marking] run function core:marker/marking with entity @s

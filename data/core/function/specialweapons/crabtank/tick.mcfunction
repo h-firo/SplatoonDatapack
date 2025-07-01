@@ -16,6 +16,7 @@ execute if score @s useSpecialWeapon matches 20 run playsound block.decorated_po
 execute if score @s useSpecialWeapon matches 10 run playsound block.decorated_pot.insert master @a ~ ~ ~ 0.8 0.9
 execute if score @s useSpecialWeapon matches ..0 run kill @e[type=item_display,tag=crabtankDisplay]
 execute if score @s useSpecialWeapon matches ..0 run effect clear @s invisibility
+execute if score @s useSpecialWeapon matches ..0 run playsound block.respawn_anchor.deplete master @a ~ ~ ~ 1 1.5
 execute if score @s useSpecialWeapon matches ..0 run attribute @s movement_speed modifier remove crabtank_move
 execute if score @s useSpecialWeapon matches ..0 run clear @s player_head
 
