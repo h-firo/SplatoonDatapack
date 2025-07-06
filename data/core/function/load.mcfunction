@@ -51,7 +51,7 @@ scoreboard objectives add shotFireRate dummy
 scoreboard objectives add killerwailDamageDelay dummy
 scoreboard objectives add killerwailTargetDelay dummy
 scoreboard objectives add isKillerWail dummy
-scoreboard objectives add damage dummy
+scoreboard objectives add objDamage dummy
 scoreboard objectives add isCube dummy
 
 #Delay
@@ -115,6 +115,14 @@ wideroller:{FireRate:130,Damage:70,Ink:90,Blur:1,AirBlur:3,Speed:0.001,Gravity:0
 charger:{\
 eliter4k:{FireRate:40,Damage:180,Ink:250,Blur:0,AirBlur:1,Speed:0.008,Gravity:0,SSpeed:2,HSpeed:0.1,DamageAT:0,PreGap:2,ChargeTime:30,CKTime:25,CKRate:8,DeltaRange:1},\
 splatcharger:{FireRate:40,Damage:160,Ink:180,Blur:0,AirBlur:1,Speed:0.006,Gravity:0,SSpeed:2,HSpeed:0.2,DamageAT:0,PreGap:2,ChargeTime:20,CKTime:25,CKRate:8,DeltaRange:1}}}
+
+#対物性能
+data merge storage objectdamage: {\
+shooter:{splattershot:35,splattershot_pro:40,FTgal:48},\
+roller:{splatroller:150,carbonroller:181,dynamoroller:306,wideroller:300},\
+charger:{eliter4k:360,splatcharger:320},\
+specialweapon:{trizooka:1320,crabtank:100,killerwail51:7}\
+}
 
 #スペシャル組み合わせ
 data merge storage subspecials: {\

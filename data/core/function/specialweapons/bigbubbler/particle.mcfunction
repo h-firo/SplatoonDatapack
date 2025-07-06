@@ -1,0 +1,8 @@
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~3 ~ ~ 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~-3 ~ ~ 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~ ~ ~3 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~ ~ ~-3 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~3 ~ ~3 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~3 ~ ~-3 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~-3 ~ ~3 0 0 0 0 1 force @a[distance=..5.5]
+$particle falling_dust{block_state:"minecraft:$(color)_stained_glass"} ~-3 ~ ~-3 0 0 0 0 1 force @a[distance=..5.5]

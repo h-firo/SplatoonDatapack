@@ -1,6 +1,7 @@
 #武器の反映
 $data modify storage player: $(pNum).weapon set from storage weapons: $(category).$(weapon)
 $data merge storage player: {$(pNum):{weapon:{name:$(weapon)}}}
+$data modify storage player: $(pNum).weapon.obj set from storage objectdamage: $(category).$(weapon)
 $data modify storage player: $(pNum).subWeapon set from storage subspecials: $(category).$(weapon).subWeapon
 $data modify storage player: $(pNum).specialWeapon set from storage subspecials: $(category).$(weapon).specialWeapon
 $data modify storage player: $(pNum).category set value $(category)
@@ -12,6 +13,9 @@ scoreboard players set @s specialPoint 0
 $execute store result score @s MaxSpecialPoint run data get storage subspecials: $(category).$(weapon).specialPoint
 #スペシャル最大使用回数設定
 $execute if data storage player: {$(pNum):{specialWeapon:"trizooka"}} run scoreboard players set @s maxSpecialUseCount 3
+$execute if data storage player: {$(pNum):{specialWeapon:"crabtank"}} run scoreboard players set @s maxSpecialUseCount 1
+$execute if data storage player: {$(pNum):{specialWeapon:"killerwail51"}} run scoreboard players set @s maxSpecialUseCount 1
+$execute if data storage player: {$(pNum):{specialWeapon:"bigbubbler"}} run scoreboard players set @s maxSpecialUseCount 1
 
 #プレイヤー情報の反映
 $data modify storage shot_temp: $(pNum).team set from storage player: $(pNum).team
