@@ -16,7 +16,7 @@ execute if score @s isSprint matches 1 if items entity @s weapon.mainhand emeral
 execute if score @s isSprint matches 0 if items entity @s weapon.mainhand emerald[custom_data={item:"weapon"}] run item modify entity @s weapon.mainhand {function:"set_custom_model_data",strings:{values:["0"],mode:"replace_section"}}
 
 #インク回復
-execute if score @s isSprint matches 1 run scoreboard players add @s ink 10
+execute if score @s isSprint matches 1 run scoreboard players add @s ink 15
 execute if score @s ink matches 999.. run scoreboard players set @s ink 999
 
 #効果

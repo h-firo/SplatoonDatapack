@@ -14,7 +14,7 @@ execute unless entity @s[tag=Click] run scoreboard players set @s charge 0
 execute unless entity @s[tag=Click] run scoreboard players set @s chargeDisplay 0
 
 #スペシャル発動
-execute if score @s rightClick matches 1 if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={item:"specialUse"}] run function core:specialweapons/use with entity @s
+$execute if score @s rightClick matches 1 if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={item:"specialUse"}] run function core:specialweapons/use with storage player: $(XpLevel)
 
 #射撃中に移動速度が遅くなることの抑制
 attribute @s movement_speed modifier remove shot_move

@@ -7,7 +7,9 @@ $execute if block ~-1 ~ ~ #core:can_sticking run fill ~-1 ~-1 ~-1 ~1 ~2 ~1 $(col
 $execute if block ~ ~ ~-1 #core:can_sticking run fill ~-1 ~-1 ~-1 ~1 ~2 ~1 $(color)_concrete replace #core:can_inking
 $execute if data entity @s {OnGround:true} run fill ~-2 ~-2 ~-2 ~2 ~4 ~2 $(color)_concrete replace #core:can_inking
 
-$execute as @e[distance=..1.5,tag=player,tag=!trizooka$(shotNum)] unless entity @s[level=$(owner)] unless score @s team matches $(team) run scoreboard players remove @s health 50
+#ダメージ処理
+$function core:damage {distance:1.5,num:$(shotNum),team:$(team),damage:50,objDamage:100,volume:1}
+$function core:damage {distance:2.5,num:$(shotNum),team:$(team),damage:30,objDamage:60,volume:1}
 
 #削除処理
 execute if block ~1 ~ ~ #core:can_sticking run kill @s
