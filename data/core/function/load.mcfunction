@@ -13,6 +13,7 @@ scoreboard objectives add playerCount dummy
 scoreboard objectives add pNum dummy
 scoreboard objectives add shotNum dummy
 scoreboard objectives add bombNum dummy
+scoreboard objectives add objNum dummy
 
 #Player
 scoreboard objectives add team dummy
@@ -89,6 +90,7 @@ title @a times 0 8 0
 #初期化
 scoreboard players set num pNum 0
 scoreboard players set num shotNum 0
+scoreboard players set num objNum 0
 scoreboard players set num bombNum 0
 scoreboard players set @a ink 999
 scoreboard players set @a specialPoint 0

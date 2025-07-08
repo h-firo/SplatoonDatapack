@@ -1,3 +1,2 @@
-$execute if entity @e[tag=ink,distance=..3.5,tag=!shot$(team)] run playsound block.vault.hit master @a ~ ~ ~ 0.6 1
-$execute if entity @e[tag=ink,distance=..3.5,tag=!shot$(team)] run scoreboard players add @a[level=$(owner)] objDamage 10
-$execute as @e[tag=ink,distance=..3.5,tag=!shot$(team)] run kill @s
+$execute as @e[tag=ink,distance=..3.5,tag=!objAttack] unless data entity @s {data:{team:$(team)}} run tag @s add objAttack
+$execute as @e[tag=ink,distance=..3.5,tag=objAttack] run data merge entity @s {data:{objNum:$(num)}}
