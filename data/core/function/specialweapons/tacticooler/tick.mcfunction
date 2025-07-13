@@ -1,0 +1,2 @@
+$execute as @n[type=armor_stand,tag=stand$(num)] at @s run function core:specialweapons/tacticooler/armorstand_tick with entity @s data
+$execute as @n[type=item_display,tag=canDisplay$(num),scores={isHaveDrinker=1}] at @s run function core:specialweapons/tacticooler/drinkingcan_tick with entity @s data

@@ -7,6 +7,9 @@ $execute if data storage player: {$(num):{specialWeapon:killerwail51}} run funct
 #グレートバリア
 $execute if data storage player: {$(num):{specialWeapon:bigbubbler}} run function core:specialweapons/bigbubbler/tick with storage player: $(num)
 
+#エナジースタンド
+$execute if data storage player: {$(num):{specialWeapon:tacticooler}} run function core:specialweapons/tacticooler/tick with storage player: $(num)
+
 #共通
 scoreboard players remove @s useSpecialWeapon 1
 execute if score @s useSpecialWeapon matches 1.. if score @s specialUseCount >= @s maxSpecialUseCount run scoreboard players set @s useSpecialWeapon 0

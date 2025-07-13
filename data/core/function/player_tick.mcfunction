@@ -3,6 +3,8 @@ function core:inventory_lock/tick with entity @s
 
 #delay処理
 execute unless score @s delay matches 0 run scoreboard players remove @s delay 1
+execute if score @s drinkTimer matches 340 run playsound entity.generic.drink master @s ~ ~ ~ 1
+execute unless score @s drinkTimer matches 0 run scoreboard players remove @s drinkTimer 1
 $execute if score @s useSpecialWeapon matches 0.. run function core:specialweapons/use_tick with storage player: $(XpLevel)
 execute if score @s shotDelay matches 1.. run scoreboard players remove @s shotDelay 10
 execute unless score @s sprintDelay matches 0 run scoreboard players remove @s sprintDelay 1

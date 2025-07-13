@@ -1,6 +1,9 @@
 #ダメージを持つ
 execute store result entity @s data.atDamage int 1 run scoreboard players get @s damage
 
+#オブジェクト紐づけを初期化
+execute unless data entity @s data.objNum run data merge entity @s {data:{objNum:-1}}
+
 #スペシャルポイント処理
 $function core:actions/add_specialpoint {fx:-1,fy:-5,fz:-1,tx:1,ty:0,tz:1,color:"$(color)",owner:$(owner)}
 

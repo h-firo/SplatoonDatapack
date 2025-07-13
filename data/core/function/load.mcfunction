@@ -51,6 +51,10 @@ scoreboard objectives add isSticking dummy
 scoreboard objectives add shotFireRate dummy
 scoreboard objectives add killerwailDamageDelay dummy
 scoreboard objectives add killerwailTargetDelay dummy
+scoreboard objectives add objTimer dummy
+scoreboard objectives add drinkNum dummy
+scoreboard objectives add drinkTimer dummy
+scoreboard objectives add isHaveDrinker dummy
 scoreboard objectives add isKillerWail dummy
 scoreboard objectives add objDamage dummy
 scoreboard objectives add isCube dummy
@@ -92,6 +96,7 @@ scoreboard players set num pNum 0
 scoreboard players set num shotNum 0
 scoreboard players set num objNum 0
 scoreboard players set num bombNum 0
+scoreboard players set @a drinkTimer 0
 scoreboard players set @a ink 999
 scoreboard players set @a specialPoint 0
 tag @a remove pNumAlreadySet
@@ -108,7 +113,7 @@ data merge storage weapons: {\
 shooter:{\
 splattershot:{FireRate:20,Damage:37,Ink:9,Blur:1,AirBlur:3,Speed:0.001,Gravity:0.14,SSpeed:2,HSpeed:0.4,DamageAT:1,PreGap:2},\
 splattershot_pro:{FireRate:26,Damage:45,Ink:20,Blur:1,AirBlur:1,Speed:0.0012,Gravity:0.07,SSpeed:2,HSpeed:0.32,DamageAT:1,PreGap:2},\
-FTgal:{FireRate:31,Damage:52,Ink:13,Blur:5,AirBlur:5,Speed:0.001,Gravity:0.1,SSpeed:2,HSpeed:0.27,DamageAT:0,PreGap:2}},\
+ftgal:{FireRate:31,Damage:52,Ink:13,Blur:5,AirBlur:5,Speed:0.001,Gravity:0.1,SSpeed:2,HSpeed:0.2,DamageAT:0,PreGap:2}},\
 roller:{\
 splatroller:{FireRate:140,Damage:120,Ink:85,Blur:1,AirBlur:3,Speed:0.001,Gravity:0.1,SSpeed:2,HSpeed:1,DamageAT:2,PreGap:2,MinRange:0,MaxRange:1,RollingSpeed:0.6,RollingDamage:125,FireRate2:145,VSpeed:0.001},\
 carbonroller:{FireRate:100,Damage:107,Ink:39,Blur:1,AirBlur:3,Speed:0.001,Gravity:0.3,SSpeed:2,HSpeed:1,DamageAT:2,PreGap:1,MinRange:0,MaxRange:1,RollingSpeed:0.7,RollingDamage:70,FireRate2:140,VSpeed:0.001},\
@@ -120,7 +125,7 @@ splatcharger:{FireRate:40,Damage:160,Ink:180,Blur:0,AirBlur:1,Speed:0.006,Gravit
 
 #対物性能
 data merge storage objectdamage: {\
-shooter:{splattershot:35,splattershot_pro:40,FTgal:48},\
+shooter:{splattershot:35,splattershot_pro:40,ftgal:48},\
 roller:{splatroller:150,carbonroller:181,dynamoroller:306,wideroller:300},\
 charger:{eliter4k:360,splatcharger:320},\
 specialweapon:{trizooka:1320,crabtank:100,killerwail51:7}\

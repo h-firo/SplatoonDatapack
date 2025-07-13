@@ -1,5 +1,5 @@
 #新ダメージ処理
-$function core:damage {distance:1,num:$(shotNum),team:$(team),damage:$(atDamage),objDamage:$(objDamage),volume:1}
+$function core:damage {distance:1,num:$(shotNum),team:$(team),damage:$(atDamage),objDamage:$(objDamage),volume:1,objNum:$(objNum)}
 
 #$execute as @e[distance=..1,tag=player,tag=!attack$(shotNum)] unless entity @s[level=$(owner)] unless score @s team matches $(team) run scoreboard players remove @s health $(atDamage)
 #$execute as @e[distance=..1,tag=player,tag=!attack$(shotNum)] at @s unless entity @s[level=$(owner)] unless score @s team matches $(team) run playsound entity.player.attack.crit master @a ~ ~ ~ 1

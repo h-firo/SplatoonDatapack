@@ -1,0 +1,1 @@
+place template minecraft:lobby -86 -61 -184

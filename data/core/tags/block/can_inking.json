@@ -13,7 +13,9 @@
       "cobbled_deepslate",
       "deepslate_tiles",
       "stone",
-      "#core:concreate"
+      "#core:concreate",
+      "oak_planks",
+      "stripped_oak_wood"
     ]
   }
   
