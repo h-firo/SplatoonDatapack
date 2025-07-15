@@ -5,7 +5,7 @@ execute as @e[type=armor_stand,tag=ink] at @s run function core:ink_tick with en
 execute as @e[type=armor_stand,tag=trizooka] at @s run function core:ink_ticks/ink_tick_trizooka with entity @s data
 execute as @e[type=armor_stand,tag=crabtank] at @s run function core:ink_ticks/ink_tick_crabtank with entity @s data
 execute as @e[type=armor_stand,tag=crabtank_explshot] at @s run function core:ink_ticks/ink_tick_explshot with entity @s data
-execute as @e[scores={health=..0}] run kill @s
+execute as @e[tag=player,scores={health=..0}] run function core:deaths/main
 
 #人数カウント
 scoreboard players set count playerCount 0

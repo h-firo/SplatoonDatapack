@@ -8,6 +8,7 @@ $execute positioned ~ ~1.6 ~ run \
 summon armor_stand ^ ^0.05 ^2.0 {Tags:["shot$(team)","crabtank_explshot","owner$(num)","sn$(shotNum)"],Invisible:true,Silent:true,Small:true,data:{team:$(team),owner:$(num),shotNum:$(shotNum)},attributes:[{id:"minecraft:gravity",base:0.14}]}
 $execute as @e[type=armor_stand,tag=owner$(num),tag=sn$(shotNum)] run data modify entity @s data.color set from storage team_color: colors.$(team)
 $execute as @e[type=armor_stand,tag=owner$(num),tag=sn$(shotNum)] at @s run function core:specialweapons/crabtank/explshot_as with storage special_temp: $(num)
+$data merge entity @n[type=armor_stand,tag=owner$(num),tag=sn$(shotNum)] {data:{objNum:-1}}
 #アイテムディスプレイ
 $summon item_display ~ ~ ~ {Tags:["explshotDisplay"],data:{sn:$(shotNum),team:$(team),owner:$(num),color:$(color)},item_display:"ground",teleport_duration:1,\
                             transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.4f,0f],scale:[0.8f,0.8f,0.8f]},\

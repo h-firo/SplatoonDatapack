@@ -1,0 +1,1 @@
+$item modify entity @s hotbar.1 {function:"set_damage",damage:$(pointPerMax),add:false}

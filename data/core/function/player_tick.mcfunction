@@ -9,11 +9,14 @@ $execute if score @s useSpecialWeapon matches 0.. run function core:specialweapo
 execute if score @s shotDelay matches 1.. run scoreboard players remove @s shotDelay 10
 execute unless score @s sprintDelay matches 0 run scoreboard players remove @s sprintDelay 1
 execute if score @s delay matches 0 run scoreboard players set @s accuracy 0
-$execute if score @s preDelay matches 0 if score @s rightHold matches 0 run function core:predelay_set with storage shot_temp: $(XpLevel)
+$execute unless score @s useSpecialWeapon matches 0.. if score @s rightHold matches 0 run function core:predelay_set with storage shot_temp: $(XpLevel)
 execute unless entity @s[tag=Click] if score @s rightHold matches 1.. run function core:weapons/chargers/is_charger with entity @s
 execute unless entity @s[tag=Click] run scoreboard players set @s rightHold 0
 execute unless entity @s[tag=Click] run scoreboard players set @s charge 0
 execute unless entity @s[tag=Click] run scoreboard players set @s chargeDisplay 0
+
+#スペシャルゲージの更新
+function core:specialbar with entity @s
 
 #スペシャル発動
 $execute if score @s rightClick matches 1 if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={item:"specialUse"}] run function core:specialweapons/use with storage player: $(XpLevel)

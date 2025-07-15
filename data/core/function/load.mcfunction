@@ -20,6 +20,7 @@ scoreboard objectives add team dummy
 scoreboard objectives add ink dummy
 scoreboard objectives add specialPoint dummy
 scoreboard objectives add MaxSpecialPoint dummy
+scoreboard objectives add specialPointPerMax dummy
 scoreboard objectives add inkTo100 dummy
 scoreboard objectives add useSpecialWeapon dummy
 scoreboard objectives add specialUseCount dummy
@@ -87,6 +88,9 @@ scoreboard objectives add isSprint dummy
 scoreboard objectives add isSquid dummy
 scoreboard objectives add isInAir dummy
 scoreboard objectives add isDamageSet dummy
+
+#Lobby
+scoreboard objectives add spawnTime dummy
 
 #ダメージを受けなくする
 title @a times 0 8 0

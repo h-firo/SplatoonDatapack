@@ -11,7 +11,7 @@ $execute if data entity @s {OnGround:true} run fill ~-2 ~-2 ~-2 ~2 ~4 ~2 $(color
 execute unless data entity @s data.objNum run data merge entity @s {data:{objNum:-1}}
 
 #直撃ダメージ
-$function core:damage {distance:1.5,num:$(shotNum),team:$(team),damage:220,objDamage:1320,volume:0.5,objNum:$(objNum)}
+$function core:damage {distance:1.5,num:$(shotNum),team:$(team),damage:220,objDamage:1320,volume:0.5,objNum:$(objNum),owner:$(owner)}
 #旧処理
 #$execute as @e[distance=..1.5,tag=player,tag=!trizooka$(shotNum)] unless score @s team matches $(team) run scoreboard players remove @s health 220
 
