@@ -47,6 +47,9 @@ scoreboard objectives add chargeDisplay dummy
 #subweapon
 scoreboard objectives add explosionTimer dummy
 scoreboard objectives add isSticking dummy
+scoreboard objectives add paintPos dummy
+scoreboard objectives add paintRate dummy
+scoreboard objectives add paintTimer dummy
 
 #SpecialWeapon
 scoreboard objectives add shotFireRate dummy
