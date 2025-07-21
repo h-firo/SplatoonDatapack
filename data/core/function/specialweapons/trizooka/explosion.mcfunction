@@ -1,5 +1,4 @@
 #爆発
-say a
 particle explosion ~ ~ ~ 0 0 0 0 1
 function core:subweapons/splashbomb/explosion with entity @s data
 execute positioned ~ ~0.5 ~ run function core:subweapons/splashbomb/particle with entity @s data

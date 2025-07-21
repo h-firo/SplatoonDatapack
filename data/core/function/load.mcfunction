@@ -9,6 +9,9 @@ scoreboard objectives add shotBlur dummy
 scoreboard objectives add setAirBlur dummy
 scoreboard objectives add playerCount dummy
 
+#CoreTime
+scoreboard objectives add coreTime dummy
+
 #IIN
 scoreboard objectives add pNum dummy
 scoreboard objectives add shotNum dummy
@@ -96,7 +99,11 @@ scoreboard objectives add isDamageSet dummy
 scoreboard objectives add spawnTime dummy
 
 #ダメージを受けなくする
-title @a times 0 8 0
+title @a times 5 100 10
+
+#インク同士が当たらないようにする
+team add noCollision
+team modify noCollision collisionRule never
 
 #初期化
 scoreboard players set num pNum 0

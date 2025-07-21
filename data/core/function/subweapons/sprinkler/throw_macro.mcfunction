@@ -7,7 +7,7 @@ playsound entity.wind_charge.throw master @a ~ ~ ~ 1 0.5
 
 #アマスタをsummon
 $execute positioned ~ ~1.6 ~ run \
-summon armor_stand ^ ^ ^2 {Tags:["bomb$(bombNum)","bomb","owner$(num)"],Invisible:true,Silent:true,Small:false,data:{team:$(team),owner:$(num),bombNum:$(bombNum),type:"sprinkler",color:$(color)},attributes:[{id:"minecraft:gravity",base:0.1}]}
+summon armor_stand ^ ^ ^2 {Team:noCollision,Tags:["bomb$(bombNum)","bomb","owner$(num)"],Invisible:true,Silent:true,Small:false,data:{team:$(team),owner:$(num),bombNum:$(bombNum),type:"sprinkler",color:$(color)},attributes:[{id:"minecraft:gravity",base:0.1}]}
 #$rotate @n[type=armor_stand,tag=bomb$(bombNum)] facing entity @s
 $summon item_display ~ ~ ~ {Tags:["bombDisplay","bn$(bombNum)"],data:{bNum:$(bombNum),team:$(team),owner:$(num),color:$(color),type:"sprinkler"},item_display:"ground",teleport_duration:1,\
                             transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.3f,0f],scale:[0.6,0.6,0.6]},\

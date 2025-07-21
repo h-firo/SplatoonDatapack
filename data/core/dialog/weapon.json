@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:notice",
+  "title": "武器を選択",
+  "external_title": "",
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "nbt": "1.name",
+      "storage": "player:",
+      "source": "storage"
+    }
+  }
+}

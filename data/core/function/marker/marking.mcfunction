@@ -1,4 +1,4 @@
-$execute if entity @s[tag=!markingInit] run function core:marker/init with storage player: $(XpLevel)
+$execute if entity @s[tag=!markingInit] run function core:marker/init {num:$(XpLevel)}
 $tp @n[type=item_display,tag=markerDisplay$(XpLevel)] ~ ~1.6 ~
 
 scoreboard players add @s markingTimer 1

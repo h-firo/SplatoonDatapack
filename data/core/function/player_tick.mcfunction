@@ -1,6 +1,7 @@
 #ホットバーロック
 function core:inventory_lock/tick with entity @s
 
+
 #delay処理
 execute unless score @s delay matches 0 run scoreboard players remove @s delay 1
 execute if score @s drinkTimer matches 340 run function core:actions/drink

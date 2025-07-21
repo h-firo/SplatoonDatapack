@@ -1,0 +1,1 @@
+item replace entity @s inventory.0 with diamond[item_name="武器を選択",item_model=splatter_shot,lore=[{"color":"gray","text":"＊クリックすることで武器を選択できる＊"}]]

@@ -7,6 +7,9 @@ execute as @e[type=armor_stand,tag=crabtank] at @s run function core:ink_ticks/i
 execute as @e[type=armor_stand,tag=crabtank_explshot] at @s run function core:ink_ticks/ink_tick_explshot with entity @s data
 execute as @e[tag=player,scores={health=..0}] at @s run function core:deaths/main
 
+#コアタイム
+scoreboard players add time coreTime 1
+
 #人数カウント
 scoreboard players set count playerCount 0
 execute as @a run scoreboard players add count playerCount 1
@@ -19,7 +22,7 @@ execute as @e[type=item_display,tag=crabtankDisplay] run function core:specialwe
 execute as @e[type=item_display,tag=kd] at @s run function core:specialweapons/killerwail51/display_tick with entity @s data
 execute as @e[type=armor_stand,tag=bomb] at @s run function core:subweapons/armorstand_tick
 
-execute as @e[tag=player] at @s if entity @s[tag=Marking] run function core:marker/marking with entity @s
+execute as @e[tag=player,type=!player] at @s if entity @s[tag=Marking] run function core:marker/marking {XpLevel:100}
 
 #アイテムを捨てるキーで発動するやつら
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{item:"weapon"}}}}] at @s run function core:subweapons/tick with entity @s
@@ -27,6 +30,7 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{item:"sp
 
 #UIとHUD
 function ui_hud:tick
+execute as @a at @s if items entity @s player.cursor *[custom_data~{item:"button"}] run function item:clickevent
 
 #タグ・スコアリセット
 tag @a remove Click

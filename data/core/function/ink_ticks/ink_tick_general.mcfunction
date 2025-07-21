@@ -1,3 +1,5 @@
+execute if entity @s[team=!noCollision] run team join noCollision @s
+
 #ダメージを持つ
 $execute unless score @s damage matches 1.. run scoreboard players set @s damage $(damage)
 $execute if score @s damage matches 1.. run scoreboard players remove @s damage $(damageAT)
