@@ -15,7 +15,10 @@
       "stone",
       "#core:concreate",
       "oak_planks",
-      "stripped_oak_wood"
+      "stripped_oak_wood",
+      "birch_planks",
+      "pale_oak_planks",
+      "stripped_pale_oak_wood"
     ]
   }
   

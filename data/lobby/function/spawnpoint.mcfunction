@@ -1,5 +1,5 @@
 #バルーン出現場所
-execute unless entity @e[type=piglin,tag=balloon,dy=2] run function lobby:spawn
+#execute unless entity @e[type=piglin,tag=balloon,distance=..3] run function lobby:spawn
 execute if entity @e[type=piglin,tag=death,tag=balloon,dy=2] run scoreboard players add @n[type=piglin,tag=death,tag=balloon,dy=2] spawnTime 1
 execute as @n[type=piglin,tag=balloon,dy=2] store result entity @s data.health int 1 run scoreboard players get @s health
 execute as @n[type=piglin,tag=balloon,dy=2] at @s run function lobby:changehv with entity @s data

@@ -1,6 +1,6 @@
 clear @s
 
-#スプラローラー
+#スプラチャージャー
 item replace entity @s inventory.0 with \
 bundle[bundle_contents=[{id:"diamond",components:{"item_model":"subweapon","custom_model_data":{strings:["curingbomb"]}}},\
                         {id:"diamond",components:{"item_model":"carrot_on_a_stick","custom_model_data":{strings:["bigbubbler"]}}},\
@@ -38,16 +38,3 @@ bundle[bundle_contents=[{id:"diamond",components:{"item_model":"subweapon","cust
                         {id:"diamond",components:{"item_model":"spread","custom_model_data":{strings:["large"]}}}],\
                         item_name={translate:"item.weapon.dymamoroller",bold:true},item_model="dynamo_roller",custom_data={item:"button",type:"weapon",content:"dynamoroller"},\
                         lore=[{"color":"gray","translate":"item.weapon.dynamoroller.lore1"},{"color":"gray","translate":"item.weapon.dynamoroller.lore2"}]]
-
-#ワイドローラー
-item replace entity @s inventory.3 with \
-bundle[bundle_contents=[{id:"diamond",components:{"item_model":"subweapon","custom_model_data":{strings:["splashwall"]}}},\
-                        {id:"diamond",components:{"item_model":"carrot_on_a_stick","custom_model_data":{strings:["inkvac"]}}},\
-                        {id:"diamond",components:{"item_model":"mouseclick","custom_model_data":{strings:["rightclick_hold_plus"]}}},\
-                        {id:"diamond",components:{"item_model":"length","custom_model_data":{strings:["large"]}}},\
-                        {id:"diamond",components:{"item_model":"rate","custom_model_data":{strings:["middle"]}}},\
-                        {id:"diamond",components:{"item_model":"power","custom_model_data":{strings:["low"]}}},\
-                        {id:"diamond",components:{"item_model":"ink","custom_model_data":{strings:["middle"]}}},\
-                        {id:"diamond",components:{"item_model":"spread","custom_model_data":{strings:["large"]}}}],\
-                        item_name={translate:"item.weapon.wideroller",bold:true},item_model="wide_roller",custom_data={item:"button",type:"weapon",content:"wideroller"},\
-                        lore=[{"color":"gray","translate":"item.weapon.wideroller.lore1"},{"color":"gray","translate":"item.weapon.wideroller.lore2"}]]

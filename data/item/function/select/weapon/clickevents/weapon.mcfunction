@@ -6,5 +6,6 @@ execute if items entity @s player.cursor *[custom_data~{content:"ftgal"}] run fu
 execute if items entity @s player.cursor *[custom_data~{content:"splatroller"}] run function command:set_weapon {category:roller,weapon:splatroller}
 execute if items entity @s player.cursor *[custom_data~{content:"carbonroller"}] run function command:set_weapon {category:roller,weapon:carbonroller}
 execute if items entity @s player.cursor *[custom_data~{content:"dynamoroller"}] run function command:set_weapon {category:roller,weapon:dynamoroller}
+execute if items entity @s player.cursor *[custom_data~{content:"wideroller"}] run function command:set_weapon {category:roller,weapon:wideroller}
 
 clear @s

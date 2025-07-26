@@ -36,6 +36,7 @@ execute as @a at @s if items entity @s player.cursor *[custom_data~{item:"button
 scoreboard players set @a ink 999
 
 #タグ・スコアリセット
+execute as @e[type=armor_stand,tag=ink] at @s run function core:damage_removetag with entity @s data
 tag @a remove Click
 tag @e[tag=player,tag=alreadySearch] remove alreadySearch
 scoreboard players set @a rightClick 0
