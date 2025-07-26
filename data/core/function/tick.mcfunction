@@ -8,7 +8,7 @@ execute as @e[type=armor_stand,tag=crabtank_explshot] at @s run function core:in
 execute as @e[tag=player,scores={health=..0}] at @s run function core:deaths/main
 
 #コアタイム
-scoreboard players add time coreTime 1
+execute if score is isGame matches 1 run function core:start/tick
 
 #人数カウント
 scoreboard players set count playerCount 0
@@ -31,6 +31,9 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{item:"sp
 #UIとHUD
 function ui_hud:tick
 execute as @a at @s if items entity @s player.cursor *[custom_data~{item:"button"}] run function item:clickevent
+
+#Debug
+scoreboard players set @a ink 999
 
 #タグ・スコアリセット
 tag @a remove Click

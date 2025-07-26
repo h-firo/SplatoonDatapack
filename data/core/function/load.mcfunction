@@ -1,5 +1,6 @@
 #スコアボード
 #Core
+scoreboard objectives add isGame dummy
 scoreboard objectives add shotX dummy
 scoreboard objectives add tX dummy
 scoreboard objectives add shotY dummy
@@ -99,7 +100,7 @@ scoreboard objectives add isDamageSet dummy
 scoreboard objectives add spawnTime dummy
 
 #ダメージを受けなくする
-title @a times 5 100 10
+title @a times 0 8 0
 
 #インク同士が当たらないようにする
 team add noCollision
@@ -153,7 +154,7 @@ splattershot_pro:{subWeapon:"angleshooter",specialWeapon:"crabtank",specialPoint
 ftgal:{subWeapon:"splashwall",specialWeapon:"killerwail51",specialPoint:200}},\
 roller:{\
 splatroller:{subWeapon:"curingbomb",specialWeapon:"bigbubbler",specialPoint:180},\
-carbonroller:{subWeapon:"autobomb",specialWeapon:"trizooka",specialPoint:190},\
+carbonroller:{subWeapon:"splatbomb",specialWeapon:"trizooka",specialPoint:190},\
 dynamoroller:{subWeapon:"sprinkler",specialWeapon:"tacticooler",specialPoint:190},\
 wideroller:{subWeapon:"splashwall",specialWeapon:"inkvac",specialPoint:190}},\
 charger:{\
